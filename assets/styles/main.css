@@ -61,11 +61,11 @@ body{
     -o-border-radius: 20px;
     -webkit-border-radius: 20px;
     border-radius: 20px;
-    transition: .3s ease background, .3s ease color;
     -webkit-transition: .3s ease background, .3s ease color;
     -moz-transition: .3s ease background, .3s ease color;
     -ms-transition: .3s ease background, .3s ease color;
     -o-transition: .3s ease background, .3s ease color;
+    transition: .3s ease background, .3s ease color;
 }
 .button:hover{
     background: #fff;
