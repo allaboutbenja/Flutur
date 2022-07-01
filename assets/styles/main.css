@@ -2,7 +2,6 @@
     GENERAL
 */
 
-<<<<<<< HEAD
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 /*
 font-family: 'Bebas Neue', cursive;
@@ -15,7 +14,6 @@ font-family: 'Pacifico', cursive;
 /*
 font-family: 'Montserrat', sans-serif;
 */
-=======
 
 *,*::after,*::before{
     margin: 0;
@@ -55,4 +53,3 @@ font-family: 'Montserrat', sans-serif;
     -webkit-border-radius: 20px;
     border-radius: 20px; 
 }
->>>>>>> 4fc777fcbf82bef1a6a60fff19ad5fbfd1e40fc8
