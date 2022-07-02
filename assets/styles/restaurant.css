@@ -62,3 +62,108 @@
 .banner .banner__redes img{
     width: 50px;
 }
+
+.popular-dishes{
+    margin-top: 30px;
+}
+
+.popular-dishes h5{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 400;
+    text-shadow: 0px 1px 3px rgb(138, 138, 138);
+    margin-bottom: 20px;
+}
+.popular-dishes .popular-dishes__content{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+.dish{
+    width: 300px;
+    box-shadow: 0px 2px 5px rgb(168, 168, 168);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    cursor: pointer;
+    -webkit-transition: .3s ease all;
+    -moz-transition: .3s ease all;
+    -ms-transition: .3s ease all;
+    -o-transition: .3s ease all;
+    transition: .3s ease all;
+}
+.dish:hover{
+    -webkit-transform: scale(1.03);
+    -moz-transform: scale(1.03);
+    -ms-transform: scale(1.03);
+    -o-transform: scale(1.03);
+    transform: scale(1.03);
+    box-shadow: 0px 6px 16px rgb(115, 115, 115);
+}
+.dish img{
+    width: 100%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.dish .dish__info{
+    padding: 10px;
+}
+.dish .dish__info h6{
+    text-align: center;
+    font-size: 14px;
+}
+.dish .dish__info p {
+    text-align: center;
+    margin: 5px 0;
+}
+.dish .dish__info .dish__info-price{
+    font-size: 18px;
+    text-align: end;
+}
+.dish .dish__info .dish__info-price::after{
+    content: ' CLP';
+}
+.dish .dish__info .dish__info-price::before{
+    content: '$';
+}
+
+.menu{
+    margin-top: 80px;
+}
+.menu .menu__title{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 400;
+    text-shadow: 0px 1px 3px rgb(138, 138, 138);
+    margin-bottom: 20px;
+}
+.menu .menu__section .menu__section-title{
+    font-size: 24px;
+    font-weight: 400;
+    text-shadow: 0px 1px 3px rgb(138, 138, 138);
+    margin: 0 0 20px 80px;
+}
+.menu .menu__section .menu__section-content{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 60px;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.menu .menu__section .menu__section-content .menu__section-item{
+    background: red;
+    width: 500px;
+}
+.menu .menu__separator{
+    margin: 20px 40px;
+}
+.menu .menu__section .menu__section-content .menu__section-item{
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    border-radius: 15px;
+    background-color: rgb(242, 242, 242);
+    padding: 20px;
+}
