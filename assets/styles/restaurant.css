@@ -82,10 +82,10 @@
 }
 .dish{
     width: 300px;
+    cursor: pointer;
     box-shadow: 0px 2px 5px rgb(168, 168, 168);
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
-    cursor: pointer;
     -webkit-transition: .3s ease all;
     -moz-transition: .3s ease all;
     -ms-transition: .3s ease all;
@@ -153,6 +153,7 @@
     grid-template-rows: 1fr 1fr;
 }
 .menu .menu__section .menu__section-content .menu__section-item{
+    cursor: pointer;
     width: 500px;
     height: 140px;
     -webkit-border-radius: 15px;
@@ -165,7 +166,20 @@
     align-self: center;
     justify-self: center;
     position: relative;
-
+    box-shadow: 0px 2px 5px rgb(168, 168, 168);
+    -webkit-transition: .3s ease all;
+    -moz-transition: .3s ease all;
+    -ms-transition: .3s ease all;
+    -o-transition: .3s ease all;
+    transition: .3s ease all;
+}
+.menu .menu__section .menu__section-content .menu__section-item:hover{
+    -webkit-transform: scale(1.03);
+    -moz-transform: scale(1.03);
+    -ms-transform: scale(1.03);
+    -o-transform: scale(1.03);
+    transform: scale(1.03);
+    box-shadow: 0px 6px 16px rgb(115, 115, 115);
 }
 .menu .menu__section .menu__section-content .menu__section-item .menu__section-item-info{
     max-height: 70px;
@@ -199,4 +213,36 @@
     .menu .menu__section .menu__section-content .menu__section-item{
         width: 300px;
     }
+}
+
+.buttons{
+    margin: 70px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.horario{
+    background-color: rgb(242, 242, 242);
+    box-shadow: 0px 2px 5px rgb(168, 168, 168);
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    border-radius: 15px;
+    width: 500px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+}
+.horario .horario__title{
+    font-family: 'Bebas Neue', cursive;  
+    letter-spacing: 1px;
+    color: rgb(124, 124, 124);
+    font-size: 34px;
+    text-shadow: 0px 3px 1px rgb(172, 172, 172);
 }
