@@ -29,6 +29,12 @@ form{
     flex-direction: column;
     gap: 20px;
 }
+form h3{
+    font-family: 'Bebas Neue', cursive; 
+    font-size: 66px;
+    letter-spacing: 1px;
+    text-shadow: 0px 3px 1px rgb(148, 148, 148);
+}
 @media screen and ( max-width:870px ) {
     header h1{
         color: #000;

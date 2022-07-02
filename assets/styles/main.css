@@ -71,3 +71,8 @@ body{
     background: #fff;
     color: #000;
 }
+.button:disabled{
+    color: rgb(255, 255, 255);
+    border: 2px solid rgb(133, 133, 133);
+    background-color: rgb(133, 133, 133);
+}
