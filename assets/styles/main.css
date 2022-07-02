@@ -26,9 +26,6 @@ body{
     font-family: 'Montserrat', sans-serif;
 }
 
-.temp{
-    width: 300px;
-}
 .input{
     display: flex;
     flex-direction: column;
