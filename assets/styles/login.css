@@ -58,6 +58,9 @@ form h3{
     padding: 10px;
 }
 
+link p{
+    text-align: center;
+}
 @media screen and ( max-width:870px ) {
     header h1{
         color: #000;
