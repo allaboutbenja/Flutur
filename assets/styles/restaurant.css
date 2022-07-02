@@ -37,6 +37,7 @@
 .banner{
     background-image: url('../images/banner.png');
     background-repeat: no-repeat;
+    background-size: cover;
     background-position: center;
     position: relative;
     height: 300px;
@@ -260,4 +261,37 @@
     .horario{
         width: 300px;
     }
+}
+
+.ubicacion .ubicacion__title{
+    letter-spacing: 1px;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    font-size: 60px;
+    font-family: 'Bebas Neue', cursive;   
+    text-shadow: 0px 3px 1px rgb(148, 148, 148);
+}
+.ubicacion .ubicacion__title::after{
+    content: ' ';
+    display: block;
+    margin: auto;
+    position: relative;
+    top: -10px;
+    width: 300px;
+    height: 1px;
+    background-color: #000;
+}
+.ubicacion .ubicacion__restaurant{
+    text-align: center;
+    font-family: 'Bebas Neue', cursive;   
+    padding: 0;
+    position: relative;
+    top: -5px;
+    font-size: 26px;
+}
+.ubicacion .ubicacion__mapa{
+    margin-top: 10px;
+    width: 100vw;
+    height: 300px;
 }
