@@ -76,7 +76,12 @@ body{
 .text-danger{
     color: rgb(251, 39, 39);
 }
-
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none
+}
 ::-webkit-scrollbar {
     width: 2px;
     height: 2px;
