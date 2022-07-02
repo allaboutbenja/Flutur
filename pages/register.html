@@ -12,30 +12,34 @@
     <header>
         <h1>Flutur</h1>
     </header>
-    <form>
-        <h3>REGISTRARSE</h3>
-        <div class="input">
-            <label for="">Nombre</label>
-            <input type="text" title="Nombre" > 
-        </div>
-        <div class="input">
-            <label for="">Apellido</label>
-            <input type="text" title="Apellido" > 
-        </div>
-        <div class="input">
-            <label for="">Correo Eléctronico</label>
-            <input type="text" title="Correo Eléctronico" > 
-        </div>
-        <div class="input">
-            <label for="">Contraseña</label>
-            <input type="text" title="Contraseña" > 
-        </div>
-        <div class="input">
-            <label for="">Confirmar contraseña</label>
-            <input type="text" title="Confirmar contraseña" > 
-        </div>
+    <section class="form">
+        <div> </div> 
+        <div> </div> 
+        <form>
+            <h3>REGISTRARSE</h3>
+            <div class="input">
+                <label for="nameInput">Nombre</label>
+                <input type="text" title="Nombre" id="nameInput"> 
+            </div>
+            <div class="input">
+                <label for="apellidoInput">Apellido</label>
+                <input type="text" title="Apellido" id="apellidoInput"> 
+            </div>
+            <div class="input">
+                <label for="correoInput">Correo Eléctronico</label>
+                <input type="email" title="Correo Eléctronico" id="correoInput"> 
+            </div>
+            <div class="input">
+                <label for="passInput">Contraseña</label>
+                <input type="password" title="Contraseña" id="passInput"> 
+            </div>
+            <div class="input">
+                <label for="pass2Input">Confirmar contraseña</label>
+                <input type="password" title="Confirmar contraseña" id="pass2Input"> 
+            </div>
 
-        <button class="button">INGRESAR</button>
-    </form>
+            <button type="button" class="button">CREAR CUENTA</button>
+        </form>
+    </section>
 </body>
 </html>
