@@ -37,6 +37,7 @@
 .banner{
     background-image: url('../images/banner.png');
     background-repeat: no-repeat;
+    background-size: cover;
     background-position: center;
     position: relative;
     height: 300px;
@@ -52,7 +53,7 @@
 }
 .banner .banner__redes{
     position: absolute;
-    bottom: 30px;
+    bottom: 20px;
     right: 30px;
     display: flex;
     justify-content: center;
