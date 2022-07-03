@@ -50,6 +50,7 @@
     font-family: 'Bebas Neue', cursive; 
     font-size: 4rem;
     letter-spacing: 3px;
+    text-align: center;
 }
 .banner .banner__redes{
     position: absolute;
