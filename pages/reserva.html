@@ -26,6 +26,23 @@
             <img src="../assets/images/logo-instagram.png" alt="">
         </section>
     </section>
-    
+    <div class="button-counter">
+        <img src="../assets/images/restar.png" alt="menos" id="btnMenos">
+        <span id="counter">1</span>
+        <img src="../assets/images/sumar.png" alt="mas" id="btnMas">
+    </div>
 </body>
+    <script>
+        const $btnMenos = document.getElementById('btnMenos');
+        const $btnMas = document.getElementById('btnMas');
+        const $counter = document.getElementById('counter');
+
+        $btnMenos.addEventListener('click',()=>{
+            if(Number($counter.textContent) > 0){
+                $counter.textContent = String(Number($counter.textContent) - 1)
+            }
+        })
+        
+        $btnMas.addEventListener('click',()=> $counter.textContent = String(Number($counter.textContent) + 1) )
+    </script>
 </html>

@@ -64,3 +64,42 @@
 .banner .banner__redes img{
     width: 50px;
 }
+
+
+
+
+
+
+
+.button-counter{
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 115px;
+    border: 2px solid #000;
+    color: #fff;
+    gap: 20px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    border-radius: 15px;
+}
+.button-counter img{
+    cursor: pointer;
+    width: 25px;
+    -webkit-transition: .3s ease all;
+    -moz-transition: .3s ease all;
+    -ms-transition: .3s ease all;
+    -o-transition: .3s ease all;
+    transition: .3s ease all;
+}
+
+.button-counter img:hover{
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
+}
