@@ -4,7 +4,7 @@
 
 body{
     background-image: url('../images/login.png');
-    background-position: center;
+    background-position: 0;
     background-repeat: no-repeat;
     width: 100vw;
     height: 100vh; 
@@ -14,12 +14,14 @@ header{
     padding: 20px 30px;
 }
 
-header h1{
+header h1 a{
     font-family: 'Pacifico', cursive;
     color: #fff;
     font-size: 55px;
 }
-
+header h1 a:hover{
+    text-decoration: none;
+}
 
 .form{
     display: flex;

@@ -16,10 +16,13 @@ body{
 header{
     padding: 20px 30px;
 }
-header h1{
+header h1 a{
     font-family: 'Pacifico', cursive;
     color: #fff;
     font-size: 55px;
+}
+header h1 a:hover{
+    text-decoration: none;
 }
 .form{
     display: flex;

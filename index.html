@@ -27,7 +27,7 @@
     </section>
     <section class="local">
         <section class="local__bus">          
-                    <div class="local__bus-item">
+                    <div class="local__bus-item" id="clickTemp">
                         <img src="./assets/images/sarita.png" alt="">
                         <section class="local__info">
                             <h6>TACU TACU RESTAURANT</h6>
@@ -36,7 +36,6 @@
                             
                         </section>
                         <iframe class="local__view" src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d1650.6724667467229!2d-70.74966744102123!3d-34.1630977064263!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1savenida%20santa%20maria!5e0!3m2!1ses!2scl!4v1656803417822!5m2!1ses!2scl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
- 
                     </div> 
                     <div class="local__bus-item">
                         <img src="./assets/images/buenabarra.jpg" alt="">
@@ -91,6 +90,11 @@
 
     </section>
 </body>
-
+    <script>
+        const $clickTemp = document.getElementById('clickTemp');
+        $clickTemp.addEventListener('click',()=>{
+            location.href = "http://127.0.0.1:5500/pages/restaurant.html"
+        })
+    </script>
 
 </html>
