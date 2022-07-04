@@ -43,7 +43,7 @@
 }
 
 .buttons{
-    margin: 70px 0;
+    margin: 70px 50px 70px 0;
     display: flex;
     justify-content: center;
     align-items: right;
@@ -166,6 +166,7 @@ margin-top: 100px;
     border-top-right-radius: 20px;
     position:static;
     height: 270px;
+    width: 90%;
 }
 
 .local .local__bus-item .local__info {
@@ -215,4 +216,11 @@ margin-top: 100px;
     cursor: pointer;
     width: 10px;
     filter:invert(50%);
+}
+.local__view{
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    width: 300px;
+    height: 150px;
 }
