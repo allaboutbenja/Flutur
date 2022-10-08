@@ -1,5 +1,6 @@
 <?php
 class Usuario{
+    private $id
     private $nombre;
     private $apellido;
     private $correo;
@@ -8,7 +9,8 @@ class Usuario{
     private $rol;
     private $estado;
 
-    public function Usuario($nombre,$apellido,$correo,$pass,$imagen,$rol,$estado) {
+    public function Usuario($id,$nombre,$apellido,$correo,$pass,$imagen,$rol,$estado) {
+        $this->id = $id;
         $this->nombre = $nombre;
         $this->apellido = $apellido;
         $this->correo = $correo;
@@ -16,6 +18,9 @@ class Usuario{
         $this->imagen = $imagen;
         $this->rol = $rol;
         $this->estado = $estado;
+    }
+    public function getId() {
+        return $this->id;
     }
     public function getNombre() {
         return $this->nombre;

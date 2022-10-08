@@ -1,5 +1,6 @@
 <?php
 class Horarios{
+    private $id
     private $lunes_inicio;
     private $lunes_cierre;
     private $martes_inicio;
@@ -15,7 +16,8 @@ class Horarios{
     private $domingo_inicio;
     private $domingo_cierre;
 
-    public function Horarios($lunes_inicio,$lunes_cierre,$martes_inicio,$martes_cierre,$miercoles_inicio,$miercoles_cierre,$jueves_inicio,$jueves_cierre,$viernes_inicio,$viernes_cierre,$sabado_inicio,$sabado_cierre,$domingo_inicio,$domingo_cierre) {
+    public function Horarios($id,$lunes_inicio,$lunes_cierre,$martes_inicio,$martes_cierre,$miercoles_inicio,$miercoles_cierre,$jueves_inicio,$jueves_cierre,$viernes_inicio,$viernes_cierre,$sabado_inicio,$sabado_cierre,$domingo_inicio,$domingo_cierre) {
+        $this->id = $id; 
         $this->lunes_inicio = $lunes_inicio;
         $this->lunes_cierre = $lunes_cierre;
         $this->martes_inicio = $martes_inicio;
@@ -30,6 +32,9 @@ class Horarios{
         $this->sabado_cierre = $sabado_cierre;
         $this->domingo_inicio = $domingo_inicio;
         $this->domingo_cierre = $domingo_cierre;
+    }
+    public function getId() {
+        return $this->id;
     }
     public function getLunes_inicio() {
         return $this->lunes_inicio;
