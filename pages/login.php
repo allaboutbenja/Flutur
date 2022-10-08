@@ -17,17 +17,17 @@
     <section class="form">
         <div> </div> 
         <div> </div> 
-        <form>
+        <form method="POST" action="../routes/auth.php" >
             <h3>Iniciar Sesión</h3>
             <div class="input">
                 <label for="">Correo Electronico</label>
-                <input type="text" title="Correo"> 
+                <input type="text" title="Correo" name="txtCorreo"> 
             </div>
             <div class="input">
                 <label for="">Contraseña</label>
-                <input type="password" title="Contraseña" > 
+                <input type="password" title="Contraseña" name="txtPass"> 
             </div>
-            <button class="button">INGRESAR</button>
+            <button name="btnAuthLogin"class="button">INGRESAR</button>
             <div>
                 <p class="separator-o">ó</p>
                 <div class="social-networks">
@@ -37,7 +37,7 @@
             </div>
             <div class="link">
                 <p>
-                    <a href="./register.html">Crear Cuenta</a>
+                    <a href="./register.php">Crear Cuenta</a>
                 </p>
                 <br>
                 <p>

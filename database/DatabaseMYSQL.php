@@ -1,12 +1,14 @@
 <?php
-    class DatabaseMYSQL implements IConexionDB{
-        private $db;
-        private $localhost;
-        private $user;
-        private $pass;
-        private $nameDB;        
+    require 'IConnectDB.php';
 
-        function __construct($localhost, $user, $pass, $nameDB)
+    class DatabaseMYSQL implements IConnectDB{
+        private mysqli $db;
+        private string $localhost;
+        private string $user;
+        private string $pass;
+        private string $nameDB;        
+
+        public function __construct($localhost, $user, $pass, $nameDB)
         {
             $this->localhost = $localhost;    
             $this->user = $user;
@@ -17,11 +19,14 @@
         public function connect(){
             $this->db = new mysqli($this->localhost,$this->user,$this->pass,$this->nameDB);
             if($this->db->connect_errno){
-                die("Error al establecer la conexion a la BD -> juegosinflables");
+                die("Error al establecer la conexion a la BD -> flutur");
             }
         }
         public function disconnect(){
             $this->db->close();
+        }
+        public function getDB(){
+            return $this->db;
         }
     }
 ?>

@@ -17,30 +17,30 @@
     <section class="form">
         <div> </div> 
         <div> </div> 
-        <form>
+        <form method="POST" action="../routes/auth.php">
             <h3>REGISTRARSE</h3>
             <div class="input">
                 <label for="nameInput">Nombre</label>
-                <input type="text" title="Nombre" id="nameInput"> 
+                <input type="text" title="Nombre" id="nameInput" name="txtNombre"> 
             </div>
             <div class="input">
                 <label for="apellidoInput">Apellido</label>
-                <input type="text" title="Apellido" id="apellidoInput"> 
+                <input type="text" title="Apellido" id="apellidoInput" name="txtApellido"> 
             </div>
             <div class="input">
                 <label for="correoInput">Correo Eléctronico</label>
-                <input type="email" title="Correo Eléctronico" id="correoInput"> 
+                <input type="email" title="Correo Eléctronico" id="correoInput" name="txtCorreo"> 
             </div>
             <div class="input">
                 <label for="passInput">Contraseña</label>
-                <input type="password" title="Contraseña" id="passInput"> 
+                <input type="password" title="Contraseña" id="passInput" name="txtPass"> 
             </div>
-            <div class="input" id="pass2">
+            <!-- <div class="input" id="pass2">
                 <label for="pass2Input">Confirmar contraseña</label>
                 <input type="password" title="Confirmar contraseña" id="pass2Input"> 
-            </div>
+            </div> -->
 
-            <button type="button" class="button" id="btnForm">CREAR CUENTA</button>
+            <button type="submit" class="button" id="btnForm" name="btnCrearCuenta">CREAR CUENTA</button>
             <p><a href="./login.html">¿Ya tienes cuenta?</a></p>
         </form>
     </section>

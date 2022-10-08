@@ -1,3 +1,16 @@
+<?php
+        require './models/Usuario.php';
+        // session_name('USER');
+        session_start();
+        $user = false;
+        if(isset($_SESSION['id'])){
+            $user = new Usuario($_SESSION['id'], $_SESSION['nombre'], $_SESSION['apellido'], $_SESSION['correo'], $_SESSION['password'], $_SESSION['imagen'], $_SESSION['rol'], $_SESSION['estado']);
+        }else{
+
+        }
+        
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -16,7 +29,12 @@
         </section>
         <section class="header__perfil">
             <img src="./assets/images/benja.jpg" alt="">
-            <span>BENJAMIN</span>
+            <span>
+                <?php 
+                    if($user) echo $user->getNombre(); else echo 'Ingresar'
+                 ?> 
+                <!-- BENJAMIN -->
+            </span>
         </section>
     </header>
     <section class="rest-disp">
