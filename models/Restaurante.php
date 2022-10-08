@@ -9,7 +9,7 @@ class Restaurante{
     private $whatsapp;
     private $web;
 
-    function __construct($nombre,$descripcipn,$direccion,$lng,$lat,$instagram,$whatsapp,$web) {
+    function __construct($nombre,$descripcion,$direccion,$lng,$lat,$instagram,$whatsapp,$web) {
         $this->nombre = $nombre;
         $this->descripcion = $descripcion;
         $this->direccion = $direccion;
