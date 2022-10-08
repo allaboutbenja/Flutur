@@ -1,5 +1,6 @@
 <?php
 class Restaurante{
+    private $id;
     private $nombre;
     private $descripcion;
     private $direccion;
@@ -9,7 +10,8 @@ class Restaurante{
     private $whatsapp;
     private $web;
 
-    function __construct($nombre,$descripcion,$direccion,$lng,$lat,$instagram,$whatsapp,$web) {
+    public function Restaurante($id,$nombre,$descripcion,$direccion,$lng,$lat,$instagram,$whatsapp,$web) {
+        $this->id = $id;
         $this->nombre = $nombre;
         $this->descripcion = $descripcion;
         $this->direccion = $direccion;
@@ -19,30 +21,33 @@ class Restaurante{
         $this->whatsapp = $whatsapp;
         $this->web = $web;
     }
-    function getNombre() {
+    public function getId() {
+        return $this->id;
+    }
+    public function getNombre() {
         return $this->nombre;
     }
-    function getDescripcion() {
+    public function getDescripcion() {
         return $this->descripcion;
     }
 
-    function getDireccion() {
+    public function getDireccion() {
         return $this->direccion;
     }
     
-    function getLng() {
+    public function getLng() {
         return $this->lng;
     }
-    function getLat() {
+    public function getLat() {
         return $this->lat;
     }
-    function getInstagram() {
+    public function getInstagram() {
         return $this->instagram;
     }
-    function getWhatsapp() {
+    public function getWhatsapp() {
         return $this->whatsapp;
     }
-    function getWeb() {
+    public function getWeb() {
         return $this->web;
     }
 }

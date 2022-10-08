@@ -7,6 +7,7 @@ class Platos{
     private $estado;
 
     public function Platos($id,$nombre,$precio,$imagen,$estado) {
+        $this->id = $id;
         $this->nombre = $nombre;
         $this->precio = $precio;
         $this->imagen = $imagen;
