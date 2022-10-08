@@ -6,7 +6,7 @@ class Platos{
     private $imagen;
     private $estado;
 
-    public function Platos($id,$nombre,$precio,$imagen,$estado) {
+     function __construct($id,$nombre,$precio,$imagen,$estado) {
         $this->id = $id;
         $this->nombre = $nombre;
         $this->precio = $precio;

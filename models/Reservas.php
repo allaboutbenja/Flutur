@@ -5,7 +5,7 @@ class Reservas{
     private $hora_fin;
    
 
-    public function Reservas($id,$hora_inicio,$hora_fin) {
+     function __construct($id,$hora_inicio,$hora_fin) {
         $this->hora_inicio = $hora_inicio;
         $this->hora_fin = $hora_fin;
     }

@@ -6,7 +6,7 @@ class Productos{
     private $imagen;
     private $estado;
 
-    public function Productos($id,$nombre,$precio,$imagen,$estado) {
+     function __construct($id,$nombre,$precio,$imagen,$estado) {
         $this->id = $id;
         $this->nombre = $nombre;
         $this->precio = $precio;
