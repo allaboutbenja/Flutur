@@ -1,52 +1,44 @@
 <?php
 class Usuario{
-    private $rut;
     private $nombre;
     private $apellido;
-    private $edad;
     private $correo;
-    private $fechaCreacion;
     private $pass;
     private $imagen;
-    private $admin;
+    private $rol;
+    private $estado;
 
-    function __construct($rut, $nombre,$apellido,$edad,$correo,$fechaCreacion,$pass,$imagen,$admin) {
-        $this->rut = $rut;
+    public function Usuario($nombre,$apellido,$correo,$pass,$imagen,$rol,$estado) {
         $this->nombre = $nombre;
         $this->apellido = $apellido;
-        $this->edad = $edad;
         $this->correo = $correo;
-        $this->fechaCreacion = $fechaCreacion;
         $this->pass = $pass;
         $this->imagen = $imagen;
-        $this->admin = $admin;
+        $this->rol = $rol;
+        $this->estado = $estado;
     }
-    function getRut() {
-        return $this->rut;
-    }
-    function getNombre() {
+    public function getNombre() {
         return $this->nombre;
     }
-    function getApellido() {
+    public function getApellido() {
         return $this->apellido;
     }
-    function getEdad() {
-        return $this->edad;
-    }
-    function getCorreo() {
+
+    public function getCorreo() {
         return $this->correo;
     }
-    function getFechaCreacion() {
-        return $this->fechaCreacion;
-    }
-    function getPass() {
+    
+    public function getPass() {
         return $this->pass;
     }
-    function getImagen() {
+    public function getImagen() {
         return $this->imagen;
     }
-    function getAdmin() {
-        return $this->admin;
+    public function getRol() {
+        return $this->rol;
+    }
+    public function getEstado() {
+        return $this->estado;
     }
 }
 ?>
