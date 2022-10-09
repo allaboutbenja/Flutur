@@ -26,30 +26,76 @@
             <img src="../assets/images/logo-instagram.png" alt="">
         </section>
     </section>
-    <h6>¿Cuantas personas estarán en la reserva?</h6>
-    <div class="button-counter">
-        <img src="../assets/images/restar.png" alt="menos" id="btnMenos">
-        <span id="counter">1</span>
-        <img src="../assets/images/sumar.png" alt="mas" id="btnMas">
+    <div class = "card-contenedor">
+        <div class= "card-img">
+
+        </div>
+        <div class="card-contenido">
+            <h3>Reserva</h3>
+            <form id="reservar-mesa">
+                <div class="form-row">
+                    <!-- <select name="dias">
+                        <option value="dia-seleccionar">Seleccionar dia</option>
+                        <option value="domingo">Domingo</option>
+                        <option value="lunes">Lunes</option>
+                        <option value="martes">Martes</option>
+                        <option value="miercoles">Miercoles</option>
+                        <option value="jueves">Jueves</option>
+                        <option value="viernes">Viernes</option>
+                        <option value="sabado">Sábado</option>
+                    </select> -->
+
+                                                
+                    <input type="date" id="fecha" name="fecha">
+
+                   
+                   <!-- <select name="horario">
+                        <option value="hora-seleccionar">Seleccionar hora</option>
+                        <option value="10">10:00</option>
+                        <option value="12">12:00</option>
+                        <option value="14">14:00</option>
+                        <option value="16">16:00</option>
+                        <option value="18">18:00</option>
+                        <option value="20">20:00</option>
+                        <option value="22">22:00</option>
+                    </select>  -->
+
+                    <input type="time" id="hora" name="hora"
+                     min="10:00" max="24:00" required>
+
+
+
+
+                </div>
+
+                <div class="form-row">
+                    <input type="text" placeholder="Nombre completo" id="nombre" name="nombre">
+                    <input type="text" placeholder="Telefono" id="telefono" name="telefono">
+
+                </div>
+
+                <div class="form-row">
+                    <input type="number" placeholder="Personas por mesa" id="personas" name="personas" min="1">
+                    <input type="submit" value="RESERVAR MESA">
+
+
+                </div>
+
+            </form>
+
+        </div>
+
+     
+
     </div>
-    <label for="start">Escoge tu fecha ideal:</label>
 
-<input type="date" id="start" name="trip-start"
-       value= "2022-05-07"
-       min="2022-01-01" max="2030-12-31">
+    <div id="administraReservas" >
+   
+        <h2 id="administra">Administrar reservas</h2>
+        <ul id="reservas" class="lista-citas"></ul>
 
-</body>
-    <script>
-        const $btnMenos = document.getElementById('btnMenos');
-        const $btnMas = document.getElementById('btnMas');
-        const $counter = document.getElementById('counter');
-
-        $btnMenos.addEventListener('click',()=>{
-            if(Number($counter.textContent) > 0){
-                $counter.textContent = String(Number($counter.textContent) - 1)
-            }
-        })
+   
         
-        $btnMas.addEventListener('click',()=> $counter.textContent = String(Number($counter.textContent) + 1) )
-    </script>
+
+    </div>
 </html>
