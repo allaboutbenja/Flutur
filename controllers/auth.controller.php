@@ -15,7 +15,12 @@
             $sql = "SELECT * FROM users WHERE correo = '$user' AND password='$pass'";
             $resp = $this->connectDB->query($sql);
             if($rs = mysqli_fetch_array($resp)){
-                $user = new Usuario($rs['id'],$rs['nombre'],$rs['apellido'],$rs['correo'],$rs['password'],$rs['imagen'],$rs['rol'],$rs['estado'],);
+                $user = new Usuario($rs['id'],$rs['nombre'],$rs['apellido'],$rs['correo'],$rs['password'],$rs['imagen'],$rs['rol'],$rs['estado']);
+                if($rs['estado'] === '1') {
+                    $this->connectDB->disconnect();
+                    header("location:  ../pages/login.php?banned");
+                    return;
+                }
                 session_start();
                 $_SESSION['user'] = $user;
                 $this->connectDB->disconnect();
@@ -31,7 +36,7 @@
         public function register($name, $lastName,$correo, $pass){
             $this->connectDB->connect();
             $sql = "INSERT INTO `users`(`nombre`, `apellido`, `correo`, `password`) VALUES ('$name','$lastName','$correo','$pass')";
-            $resp = $this->connectDB->query($sql);
+            $this->connectDB->query($sql);
             if($this->connectDB->getDB()->affected_rows){
                 $this->connectDB->disconnect();
                 header("location:  ../pages/login.php");
@@ -48,7 +53,6 @@
             session_destroy();
             header("location:  ../pages/login.php?logout");
         }
-        
     }
 
 

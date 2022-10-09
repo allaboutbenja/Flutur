@@ -1,5 +1,10 @@
+<?php
+        session_start();
+        $login = false;
+        if(isset($_SESSION['user'])) header("location:  ../index.php");   
+?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">

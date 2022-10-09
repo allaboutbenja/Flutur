@@ -1,21 +1,37 @@
 <?php
 class Reservas{
-    private $id;
-    private $hora_inicio;
-    private $hora_fin;
+    private int $id;
+    private int $idRestaurant;
+    private int $idUser;
+    private int $idPlatos;
+    private string $hora_inicio;
+    private string $hora_fin;
    
 
-    function __construct($id,$hora_inicio,$hora_fin) {
+    function __construct($id,$idRestaurant ,$idUser ,$idPlatos,$hora_inicio,$hora_fin) {
+        $this->id = $id;
+        $this->idRestaurant = $idRestaurant;
+        $this->idUser = $idUser;
+        $this->idPlatos = $idPlatos;
         $this->hora_inicio = $hora_inicio;
         $this->hora_fin = $hora_fin;
     }
-    public function getId() {
+    public function getId():int {
         return $this->id;
     }
-    public function getHora_inicio() {
+    public function getIdRestaurant():int {
+        return $this->idRestaurant;
+    }
+    public function getIdUser():int {
+        return $this->idUser;
+    }
+    public function getIdPlatos():int {
+        return $this->idPlatos;
+    }
+    public function getHora_inicio():string {
         return $this->hora_inicio;
     }
-    public function getHora_fin() {
+    public function getHora_fin():string {
         return $this->hora_fin;
     }
 }

@@ -1,16 +1,13 @@
 <?php
         require './models/Usuario.php';
-        // session_name('USER');
         session_start();
         $login = false;
+        $isAdmin = false;
         if(isset($_SESSION['user'])){
-            // $user = new Usuario($_SESSION['id'], $_SESSION['nombre'], $_SESSION['apellido'], $_SESSION['correo'], $_SESSION['password'], $_SESSION['imagen'], $_SESSION['rol'], $_SESSION['estado']);
             $login = true;
             $user = $_SESSION['user'];
-        }else{
-
-        }
-        
+            if($_SESSION['user']->getRol() == '1') $isAdmin = true;
+        }        
 ?>
 
 <!DOCTYPE html>
