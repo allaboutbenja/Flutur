@@ -1,6 +1,4 @@
-<?php
-    require '../models/Restaurante.php';
-    
+<?php    
     class RestaurantController {
     
         private IConnectDB $connectDB;
@@ -18,11 +16,11 @@
             
         }
 
-        public function postRestaurant(Restaurante $restaurant){
+        public function postRestaurant($idUser, $name, $desc, $address, $lng, $lat, $ig, $whatsApp, $web){
             
         }
 
-        public function putRestaurant($id, Restaurante $restaurant){
+        public function putRestaurant($idRestaurant, $idUser, $name, $desc, $address, $lng, $lat, $ig, $whatsApp, $web){
             
         }
 

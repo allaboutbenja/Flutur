@@ -32,7 +32,7 @@
                 <?php 
                     if($login){
                         echo $user->getNombre(); 
-                        echo '<a href="./routes/auth.php?logout" class="me-3">Salir</a>';
+                        echo '<a href="./routes/auth.route.php?logout" class="me-3">Salir</a>';
                     } 
                     else echo '<a href="./pages/login.php">Ingresar</a>';
                  ?> 

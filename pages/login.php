@@ -22,7 +22,7 @@
     <section class="form">
         <div> </div> 
         <div> </div> 
-        <form method="POST" action="../routes/auth.php" >
+        <form method="POST" action="../routes/auth.route.php" >
             <h3>Iniciar Sesión</h3>
             <div class="input">
                 <label for="">Correo Electronico</label>

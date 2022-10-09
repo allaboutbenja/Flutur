@@ -1,7 +1,5 @@
-<?php
-    require '../models/Usuario.php';
-    
-    class RestaurantController {
+<?php    
+    class UserController {
     
         private IConnectDB $connectDB;
 
@@ -18,7 +16,7 @@
             
         }
 
-        public function putUser($id, Usuario $usuario){
+        public function putUser($id, $name, $lastname, $correo, $pass, $img){
             
         }
 
