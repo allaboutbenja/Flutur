@@ -6,8 +6,8 @@
     /*
     *   Get Restaurants
     */
-    if(isset($_GET['getRestaurants'])){
-        // $restaurant->getRestaurants();
+    if(isset($_GET['getRestaurants']) && isset($_GET['redirectTo'])){
+        $restaurant->getRestaurants($_GET['redirectTo']);
     }
 
     /*

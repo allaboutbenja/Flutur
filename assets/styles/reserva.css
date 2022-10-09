@@ -103,7 +103,6 @@ label {
     -o-transition: .3s ease all;
     transition: .3s ease all;
 }
-
 .button-counter img:hover{
     -webkit-transform: scale(1.2);
     -moz-transform: scale(1.2);
@@ -111,27 +110,23 @@ label {
     -o-transform: scale(1.2);
     transform: scale(1.2);
 }
-
 .card-contenedor {
     display:grid;
-    grid-template-columns: 420px 420px;
-    
-
+    grid-template-columns: 1fr;
+    justify-content: center;
 }
-
-
-
 .banner h2 {
     padding-bottom:40px;
     margin-bottom:20px;
     
 }
-
 .card-contenido {
     background:#fff;
     height:330px;
+    width: 500px;
+    text-align: center;
+    margin: auto;
 }
-
 .card-contenido h3 {
     text-align:center;
     color: #000;
