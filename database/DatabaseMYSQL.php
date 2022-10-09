@@ -25,6 +25,9 @@
         public function disconnect(){
             $this->db->close();
         }
+        public function query($sql){
+            return $this->db->query($sql);
+        }
         public function getDB(){
             return $this->db;
         }

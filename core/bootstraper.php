@@ -2,8 +2,7 @@
 <?php 
     require '../database/DatabaseMYSQL.php';
     // class Bootstraper {
-        $connectDB = new DatabaseMYSQL('localhost','root','','tesis');
-
+        static $connectDB = new DatabaseMYSQL('localhost','root','','tesis');
     // }
 
 ?>

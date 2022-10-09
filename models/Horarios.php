@@ -16,7 +16,7 @@ class Horarios{
     private $domingo_inicio;
     private $domingo_cierre;
 
-     function __construct($id,$lunes_inicio,$lunes_cierre,$martes_inicio,$martes_cierre,$miercoles_inicio,$miercoles_cierre,$jueves_inicio,$jueves_cierre,$viernes_inicio,$viernes_cierre,$sabado_inicio,$sabado_cierre,$domingo_inicio,$domingo_cierre) {
+    function __construct($id,$lunes_inicio,$lunes_cierre,$martes_inicio,$martes_cierre,$miercoles_inicio,$miercoles_cierre,$jueves_inicio,$jueves_cierre,$viernes_inicio,$viernes_cierre,$sabado_inicio,$sabado_cierre,$domingo_inicio,$domingo_cierre) {
         $this->id = $id; 
         $this->lunes_inicio = $lunes_inicio;
         $this->lunes_cierre = $lunes_cierre;

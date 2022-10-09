@@ -2,9 +2,11 @@
         require './models/Usuario.php';
         // session_name('USER');
         session_start();
-        $user = false;
-        if(isset($_SESSION['id'])){
-            $user = new Usuario($_SESSION['id'], $_SESSION['nombre'], $_SESSION['apellido'], $_SESSION['correo'], $_SESSION['password'], $_SESSION['imagen'], $_SESSION['rol'], $_SESSION['estado']);
+        $login = false;
+        if(isset($_SESSION['user'])){
+            // $user = new Usuario($_SESSION['id'], $_SESSION['nombre'], $_SESSION['apellido'], $_SESSION['correo'], $_SESSION['password'], $_SESSION['imagen'], $_SESSION['rol'], $_SESSION['estado']);
+            $login = true;
+            $user = $_SESSION['user'];
         }else{
 
         }
@@ -31,10 +33,14 @@
             <img src="./assets/images/benja.jpg" alt="">
             <span>
                 <?php 
-                    if($user) echo $user->getNombre(); else echo 'Ingresar'
+                    if($login){
+                        echo $user->getNombre(); 
+                        echo '<a href="./routes/auth.php?logout" class="me-3">Salir</a>';
+                    } 
+                    else echo '<a href="./pages/login.php">Ingresar</a>';
                  ?> 
-                <!-- BENJAMIN -->
             </span>
+            
         </section>
     </header>
     <section class="rest-disp">

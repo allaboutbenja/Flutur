@@ -13,18 +13,11 @@
         public function login($user, $pass){
            $this->connectDB->connect();
             $sql = "SELECT * FROM users WHERE correo = '$user' AND password='$pass'";
-            $resp = $this->connectDB->getDB()->query($sql);
+            $resp = $this->connectDB->query($sql);
             if($rs = mysqli_fetch_array($resp)){
                 $user = new Usuario($rs['id'],$rs['nombre'],$rs['apellido'],$rs['correo'],$rs['password'],$rs['imagen'],$rs['rol'],$rs['estado'],);
                 session_start();
-                $_SESSION['id'] = $user->getId();
-                $_SESSION['nombre'] = $user->getNombre();
-                $_SESSION['apellido'] = $user->getApellido();
-                $_SESSION['correo'] = $user->getCorreo();
-                $_SESSION['password'] = $user->getPass();
-                $_SESSION['imagen'] = $user->getImagen();
-                $_SESSION['rol'] = $user->getRol();
-                $_SESSION['estado'] = $user->getEstado();
+                $_SESSION['user'] = $user;
                 $this->connectDB->disconnect();
                 header("location:  ../index.php");
                 return;
@@ -38,7 +31,7 @@
         public function register($name, $lastName,$correo, $pass){
             $this->connectDB->connect();
             $sql = "INSERT INTO `users`(`nombre`, `apellido`, `correo`, `password`) VALUES ('$name','$lastName','$correo','$pass')";
-            $resp = $this->connectDB->getDB()->query($sql);
+            $resp = $this->connectDB->query($sql);
             if($this->connectDB->getDB()->affected_rows){
                 $this->connectDB->disconnect();
                 header("location:  ../pages/login.php");
@@ -48,6 +41,14 @@
             header("location:  ../pages/register.php?RegisterError");
             return;
         }
+
+        public function logout(){
+            session_start();
+            session_unset();
+            session_destroy();
+            header("location:  ../pages/login.php?logout");
+        }
+        
     }
 
 
